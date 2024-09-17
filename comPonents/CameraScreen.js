@@ -2,6 +2,9 @@ import React, { useState, useRef } from 'react';
 import { View, Text, TouchableOpacity, StyleSheet, Image } from 'react-native';
 import { useNavigation, useRoute } from '@react-navigation/native';
 import { RNCamera } from 'react-native-camera';
+// import { Dimensions } from 'react-native';
+// const SCREEN_WIDTH = Dimensions.get('screen').width; 
+// const SCREEN_HEIGHT = Dimensions.get('screen').height;
 
 const CameraScreen = () => {
   const [image, setImage] = useState(null);
@@ -86,8 +89,8 @@ const styles = StyleSheet.create({
     marginBottom: 17,
   },
   captureBox: {
-    width: '100%',
-    height: 400,
+    width: '124%',
+    height: '70%',
     borderColor: 'gray',
     justifyContent: 'center',
     alignItems: 'center',
@@ -95,16 +98,17 @@ const styles = StyleSheet.create({
   },
   camera: {
     flex: 1,
-    width: '88%',
+    width: '90%',
+    height:'60%'
   },
   imageSample: {
     width: '100%',
-    height: '100%',
+    height: '80%',
     resizeMode: 'contain',
   },
   captureButton: {
     alignSelf: 'center',
-    marginVertical: 20,
+    marginVertical: 10,
   },
   cameraIcon: {
     width: 70,

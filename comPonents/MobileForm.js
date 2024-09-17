@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import { View, Text, Image, TextInput, StyleSheet, StatusBar, TouchableOpacity, Alert } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import AppsFlyer,{ AppsFlyerConsent } from 'react-native-appsflyer';
-import { appsflyerMp } from './EventsTracker';
+
 
 const MobileForm = ({ navigation }) => {
 
@@ -12,12 +11,23 @@ const MobileForm = ({ navigation }) => {
     const formattedText = text.replace(/[^\d]/g, '').slice(0, 10);
     setPhoneNumber(formattedText);
     console.log("Phone Number: ", formattedText); // Debugging message
+
+    // Track the event of phone number input
+
+    // appsflyerMp('Phone_Number_Input', { phoneNumber: formattedText });
   };
   const handleVerifyPress = () => {
     if (phoneNumber.length === 10) {
+      // Track the verification button press event
+      // appsflyerMp('Phone_Verification_Initiated', { phoneNumber: `+91${phoneNumber}` });
+
       navigation.navigate('OTPScreen', { phoneNumber: `+91${phoneNumber}` });
     } else {
       Alert.alert("Invalid Number", "Please enter a valid 10-digit phone number.");
+
+
+      // Track an event for invalid phone number input
+      // appsflyerMp('Invalid_Phone_Number', { phoneNumber });
     }
   };
 

@@ -9,7 +9,7 @@ import KYCDocuments from './comPonents/KYCDocuments';
 import CameraScreen from './comPonents/CameraScreen';
 import VerificationComplete from './comPonents/VerificationComplete';
  
-//tushar
+
 const Stack = createNativeStackNavigator();
 
 const App = () => {

@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { Component, useEffect } from 'react';
 import { View, StyleSheet, Image } from 'react-native';
 
 const SplashScreen = ({ navigation }) => {
@@ -8,7 +8,6 @@ const SplashScreen = ({ navigation }) => {
       .then(response => response.json())
       .then(data => {
         console.log(data);
-
 
 
         const timeout = setTimeout(() => {
