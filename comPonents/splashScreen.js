@@ -3,11 +3,7 @@ import { View, StyleSheet, Image } from 'react-native';
 
 const SplashScreen = ({ navigation }) => {
   
-  useEffect(() => {
-    fetch('https://user-gateway.test.ideopay.in/api/v1/onload/data')
-      .then(response => response.json())
-      .then(data => {
-        console.log(data);
+ 
 
 
         const timeout = setTimeout(() => {
